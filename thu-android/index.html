@@ -41,6 +41,28 @@ h3{font-size:20px;margin:28px 0 12px}
 footer{text-align:center;color:var(--muted);font-size:16px;margin-top:28px}
 footer a{color:var(--gold)}
 .ios{display:none}
+.phone{position:relative;margin:18px auto 4px;max-width:300px;background:#fff;color:#202124;border:8px solid #2B3557;border-radius:30px;overflow:hidden;font:15px/1.4 Roboto,-apple-system,"Segoe UI",sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.phone .bar{height:22px;background:#f1f3f4;display:flex;justify-content:space-between;align-items:center;padding:0 12px;font-size:11px;color:#5f6368}
+.phone .url{margin:8px 10px;padding:6px 12px;background:#f1f3f4;border-radius:999px;font-size:12px;color:#5f6368;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.phone .body{padding:10px 16px 30px}
+.phone .t{font-size:17px;font-weight:600;margin:4px 0 4px}
+.phone .s{font-size:13px;color:#5f6368;margin:0 0 10px}
+.phone .row{display:flex;align-items:center;gap:10px}
+.phone .ic{width:46px;height:46px;border-radius:12px;background:#0A1124 url(/apple-touch-icon.png) center/cover;flex:none}
+.phone .gl{height:8px;border-radius:4px;background:#e8eaed;margin:8px 0}
+.phone .gl.w60{width:60%}.phone .gl.w80{width:80%}
+.phone .pb{display:inline-block;padding:9px 18px;border-radius:999px;font-weight:600;font-size:14px;color:#fff;background:#1A73E8;position:relative}
+.phone .pb.green{background:#01875F;display:block;text-align:center;border-radius:10px}
+.phone .ring{outline:3px solid #F4B400;outline-offset:3px;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{outline-offset:7px;outline-color:rgba(244,180,0,.35)}}
+.phone .tap{position:absolute;font-size:30px;line-height:1;right:-6px;bottom:-26px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.3))}
+.phone .ok{display:flex;align-items:center;gap:8px;margin-top:12px;padding:8px 10px;border-radius:10px;background:#e6f4ea;color:#137333;font-size:13px;font-weight:600}
+.phone .av{width:30px;height:30px;border-radius:50%;background:#A142F4;color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.phone .search{flex:1;padding:8px 12px;border-radius:999px;background:#f1f3f4;font-size:12px;color:#5f6368}
+.phone .menu{margin-top:10px;border:1px solid #e0e0e0;border-radius:14px;padding:12px;text-align:center}
+.phone .menu .mail{font-weight:600;background:#fef7e0;border-radius:6px;padding:2px 6px;outline:3px solid #F4B400;outline-offset:2px}
+.cap{text-align:center;font-size:15px;color:var(--muted);margin:10px 0 0}
+@media (prefers-reduced-motion:reduce){.phone .ring{animation:none}}
 </style>
 </head>
 <body>
@@ -54,6 +76,14 @@ footer a{color:var(--gold)}
   <div class="note ios" id="ios">Bạn đang dùng iPhone hoặc iPad. Trang này dành cho máy Android. Bản iPhone sẽ có trên App Store, mời bạn xem tại <a href="/" style="color:var(--gold)">thienkhaitam.com</a>.</div>
 
   <div class="note">Trước khi bắt đầu: mở ứng dụng <b>Google Play</b>, bấm ảnh đại diện ở góc trên bên phải và nhớ <b>địa chỉ Gmail</b> đang hiện ở đó. Cả ba bước dưới đây đều dùng đúng Gmail này.</div>
+  <div class="phone" aria-hidden="true">
+    <div class="bar"><span>Google Play</span><span>▮▮ 76%</span></div>
+    <div class="body">
+      <div class="row"><div class="search">Tìm ứng dụng và trò chơi</div><div class="av ring" style="position:relative">P<span class="tap" style="right:-14px;bottom:-24px">👆</span></div></div>
+      <div class="menu"><div class="av" style="margin:0 auto 6px">P</div>Tên của bạn<br><span class="mail">ban@gmail.com</span></div>
+    </div>
+  </div>
+  <p class="cap">Gmail hiện ở đây là Gmail bạn dùng cho cả ba bước.</p>
 
   <section class="step">
     <span class="num">1</span><h2>Tham gia nhóm dùng thử</h2>
@@ -62,6 +92,16 @@ footer a{color:var(--gold)}
       <li>Đăng nhập bằng Gmail ở trên nếu được hỏi.</li>
       <li>Bấm nút <span class="mock blue">Tham gia nhóm</span> (có máy ghi là <span class="mock blue">Yêu cầu tham gia nhóm</span>).</li>
     </ol>
+    <div class="phone" aria-hidden="true">
+      <div class="bar"><span>Chrome</span><span>▮▮ 76%</span></div>
+      <div class="url">groups.google.com/g/thienkhaitam-test</div>
+      <div class="body">
+        <div class="t">Thiền Khai Tâm - Dùng thử Android</div>
+        <div class="gl w80"></div><div class="gl w60"></div>
+        <div style="margin-top:14px"><span class="pb ring">Tham gia nhóm<span class="tap">👆</span></span></div>
+      </div>
+    </div>
+    <p class="cap">Bấm nút màu xanh này.</p>
     <p class="see">Nếu bạn đã gửi Gmail cho chúng tôi để thêm giúp thì bỏ qua bước này. Khi nhóm duyệt xong (thường trong vài giờ), bạn làm tiếp bước 2.</p>
   </section>
 
@@ -73,6 +113,17 @@ footer a{color:var(--gold)}
       <li>Bấm nút <span class="mock blue">Trở thành người thử nghiệm</span>.</li>
       <li>Trang hiện dòng “Bạn hiện là người thử nghiệm” là xong.</li>
     </ol>
+    <div class="phone" aria-hidden="true">
+      <div class="bar"><span>Chrome</span><span>▮▮ 76%</span></div>
+      <div class="url">play.google.com/apps/testing/…</div>
+      <div class="body">
+        <div class="row"><div class="ic"></div><div><div class="t" style="margin:0">Thiền Khai Tâm</div><div class="s" style="margin:0">Chương trình thử nghiệm</div></div></div>
+        <div class="gl w80" style="margin-top:12px"></div><div class="gl w60"></div>
+        <div style="margin-top:14px"><span class="pb ring">Trở thành người thử nghiệm<span class="tap">👆</span></span></div>
+        <div class="ok">✓ Bạn hiện là người thử nghiệm</div>
+      </div>
+    </div>
+    <p class="cap">Bấm nút xanh, rồi thấy dòng màu xanh lá là xong.</p>
     <p class="see"><span class="wait">Đợi khoảng 15 phút đến vài giờ</span> để Google mở ứng dụng cho bạn, rồi làm bước 3.</p>
   </section>
 
@@ -83,6 +134,15 @@ footer a{color:var(--gold)}
       <li>Bấm nút <span class="mock green">Cài đặt</span>.</li>
       <li>Mở ứng dụng và đăng nhập bằng Google. Bạn nhớ <b>giữ ứng dụng trên máy ít nhất 14 ngày</b> nhé.</li>
     </ol>
+    <div class="phone" aria-hidden="true">
+      <div class="bar"><span>Google Play</span><span>▮▮ 76%</span></div>
+      <div class="body">
+        <div class="row"><div class="ic" style="width:60px;height:60px"></div><div><div class="t" style="margin:0">Thiền Khai Tâm</div><div class="s" style="margin:0">Đặng Thái Cường · Thử nghiệm</div></div></div>
+        <div style="margin-top:16px;position:relative"><span class="pb green ring">Cài đặt<span class="tap" style="right:14px">👆</span></span></div>
+        <div class="gl w80" style="margin-top:26px"></div><div class="gl w60"></div>
+      </div>
+    </div>
+    <p class="cap">Bấm “Cài đặt”, chờ tải xong rồi bấm “Mở”.</p>
   </section>
 
   <h3>Gặp trục trặc?</h3>
