@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tải Thiền Khai Tâm cho Android</title>
+<meta name="description" content="Tải và cài ứng dụng Thiền Khai Tâm cho điện thoại Android trong vài phút.">
+<meta property="og:title" content="Tải Thiền Khai Tâm cho Android">
+<meta property="og:description" content="Tải file cài đặt, mở ra và bấm Cài đặt. Đăng nhập bằng Google là dùng được ngay.">
+<meta property="og:image" content="https://thienkhaitam.com/icon-512.png">
+<link rel="icon" href="/favicon.png">
+<style>
+:root{--bg:#0A1124;--card:#141E3A;--line:#26335A;--text:#F4EDDF;--muted:#B4BCD0;--gold:#D2A65A;--ok:#7BC59A}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:19px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:20px 16px 48px}
+main{max-width:560px;margin:0 auto}
+header{text-align:center;margin:8px 0 24px}
+header img{width:76px;height:76px;border-radius:18px}
+h1{font-family:Georgia,serif;font-size:28px;line-height:1.25;margin:12px 0 8px}
+.lead{color:var(--muted);margin:0}
+.note{background:#1B2748;border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:0 0 20px;font-size:17px}
+.note b{color:var(--gold)}
+.step{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 18px;margin:0 0 16px}
+.num{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--gold);color:#0A1124;font-weight:700;font-size:20px;margin-right:10px;vertical-align:middle}
+h2{display:inline;font-size:22px;vertical-align:middle}
+.step p{margin:14px 0 0}
+.step ol{margin:10px 0 0;padding-left:22px}
+.step li{margin:6px 0}
+a.btn{display:block;text-align:center;padding:17px 14px;border-radius:16px;background:var(--gold);color:#0A1124;font-weight:700;font-size:20px;text-decoration:none;margin-top:16px}
+a.btn:active{opacity:.85}
+.see{margin-top:14px;font-size:16px;color:var(--muted)}
+.mock{display:inline-block;padding:4px 12px;border-radius:999px;font-size:15px;font-weight:600;white-space:nowrap}
+.mock.blue{background:#1A73E8;color:#fff}
+.mock.green{background:#01875F;color:#fff}
+.wait{color:var(--ok);font-weight:600}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:0 0 10px;font-size:17px}
+summary{cursor:pointer;font-weight:600}
+details p{margin:10px 0 0;color:var(--muted)}
+h3{font-size:20px;margin:28px 0 12px}
+footer{text-align:center;color:var(--muted);font-size:16px;margin-top:28px}
+footer a{color:var(--gold)}
+.ios{display:none}
+.phone{position:relative;margin:18px auto 4px;max-width:300px;background:#fff;color:#202124;border:8px solid #2B3557;border-radius:30px;overflow:hidden;font:15px/1.4 Roboto,-apple-system,"Segoe UI",sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.phone .bar{height:22px;background:#f1f3f4;display:flex;justify-content:space-between;align-items:center;padding:0 12px;font-size:11px;color:#5f6368}
+.phone .url{margin:8px 10px;padding:6px 12px;background:#f1f3f4;border-radius:999px;font-size:12px;color:#5f6368;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.phone .body{padding:10px 16px 30px}
+.phone .t{font-size:17px;font-weight:600;margin:4px 0 4px}
+.phone .s{font-size:13px;color:#5f6368;margin:0 0 10px}
+.phone .row{display:flex;align-items:center;gap:10px}
+.phone .ic{width:46px;height:46px;border-radius:12px;background:#0A1124 url(/apple-touch-icon.png) center/cover;flex:none}
+.phone .gl{height:8px;border-radius:4px;background:#e8eaed;margin:8px 0}
+.phone .gl.w60{width:60%}.phone .gl.w80{width:80%}
+.phone .pb{display:inline-block;padding:9px 18px;border-radius:999px;font-weight:600;font-size:14px;color:#fff;background:#1A73E8;position:relative}
+.phone .pb.green{background:#01875F;display:block;text-align:center;border-radius:10px}
+.phone .ring{outline:3px solid #F4B400;outline-offset:3px;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{outline-offset:7px;outline-color:rgba(244,180,0,.35)}}
+.phone .tap{position:absolute;font-size:30px;line-height:1;right:-6px;bottom:-26px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.3))}
+.phone .ok{display:flex;align-items:center;gap:8px;margin-top:12px;padding:8px 10px;border-radius:10px;background:#e6f4ea;color:#137333;font-size:13px;font-weight:600}
+.phone .av{width:30px;height:30px;border-radius:50%;background:#A142F4;color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.phone .search{flex:1;padding:8px 12px;border-radius:999px;background:#f1f3f4;font-size:12px;color:#5f6368}
+.phone .menu{margin-top:10px;border:1px solid #e0e0e0;border-radius:14px;padding:12px;text-align:center}
+.phone .menu .mail{font-weight:600;background:#fef7e0;border-radius:6px;padding:2px 6px;outline:3px solid #F4B400;outline-offset:2px}
+.cap{text-align:center;font-size:15px;color:var(--muted);margin:10px 0 0}
+@media (prefers-reduced-motion:reduce){.phone .ring{animation:none}}
+</style>
+<main>
+  <header>
+    <img src="/apple-touch-icon.png" alt="">
+    <h1>Tải Thiền Khai Tâm cho Android</h1>
+    <p class="lead">Cài trong vài phút, ngay trên chiếc điện thoại bạn sẽ dùng.</p>
+  </header>
+
+  <div class="note ios" id="ios"><b>Bạn đang dùng iPhone hoặc iPad.</b> Trang này dành cho máy Android. Bản iPhone có sẵn trên App Store, mời bạn mở <a href="/tai" style="color:var(--gold)">thienkhaitam.com/tai</a>.</div>
+
+  <section class="step">
+    <span class="num">1</span><h2>Tải file cài đặt</h2>
+    <a class="btn" href="ThienKhaiTam.apk" download>Tải Thiền Khai Tâm (Android)</a>
+    <p class="see">Nếu Chrome hỏi “File này có thể gây hại”, bạn bấm <b>Vẫn tải xuống</b>. Đây là bản chính thức do Google Play ký.</p>
+  </section>
+
+  <section class="step">
+    <span class="num">2</span><h2>Mở file và cài</h2>
+    <ol>
+      <li>Kéo thanh thông báo xuống, chạm vào file vừa tải (hoặc mở ứng dụng <b>Tệp</b>, mục <b>Tải xuống</b>).</li>
+      <li>Nếu máy báo chưa cho phép cài từ nguồn này, bấm <b>Cài đặt</b> và bật <b>Cho phép từ nguồn này</b>, rồi quay lại.</li>
+      <li>Bấm <b>Cài đặt</b>. Nếu Play Protect hỏi, chọn <b>Vẫn cài đặt</b>.</li>
+    </ol>
+  </section>
+
+  <section class="step">
+    <span class="num">3</span><h2>Mở app và đăng nhập Google</h2>
+    <p>Mở Thiền Khai Tâm, vào tab <b>Của tôi</b> và đăng nhập bằng Google. Các bài miễn phí, tập thở, gõ mõ dùng được ngay cả khi chưa đăng nhập.</p>
+  </section>
+
+  <section class="step">
+    <span class="num">4</span><h2>Nhận cập nhật tự động (một lần bấm)</h2>
+    <p>Sau khi bạn đăng nhập, trong vòng một ngày chúng tôi sẽ gửi email mời. Bạn chỉ cần mở email, bấm nút dưới đây bằng <b>đúng Gmail đã đăng nhập</b> và chọn <span class="mock blue">Trở thành người thử nghiệm</span>.</p>
+    <a class="btn" href="https://play.google.com/apps/testing/com.leocuong.thienkhaitam">Trở thành người thử nghiệm</a>
+    <p class="see">Từ đó Google Play tự cập nhật app cho bạn, không cần cài lại. Bạn giúp giữ app trên máy ít nhất 14 ngày nhé, mỗi lượt mở app là một lời ủng hộ cho Thiền Khai Tâm sớm có mặt chính thức trên Google Play.</p>
+  </section>
+
+  <h3>Gặp trục trặc?</h3>
+  <details>
+    <summary>Không thấy nút Cài đặt, hoặc máy chặn file</summary>
+    <p>Vào Cài đặt của máy, tìm “Cài ứng dụng không rõ nguồn gốc” (có máy ghi “Cài đặt ứng dụng không xác định”), chọn Chrome và bật cho phép. Sau đó mở lại file.</p>
+  </details>
+  <details>
+    <summary>Bấm “Trở thành người thử nghiệm” báo không tìm thấy</summary>
+    <p>Có thể chúng tôi chưa thêm Gmail của bạn. Bạn chờ email mời, hoặc gửi Gmail tới info@thienkhaitam.com để được thêm ngay. App vẫn dùng bình thường trong lúc chờ.</p>
+  </details>
+  <details>
+    <summary>Muốn mua gói hội viên</summary>
+    <p>Sau khi bấm “Trở thành người thử nghiệm”, bạn mua ngay trong app. Hoặc mua bằng chuyển khoản QR tại <a href="/mua" style="color:var(--gold)">thienkhaitam.com/mua</a>, đăng nhập cùng tài khoản là dùng được.</p>
+  </details>
+
+  <footer>
+    Cần giúp đỡ? Gửi ảnh chụp màn hình tới <a href="mailto:info@thienkhaitam.com">info@thienkhaitam.com</a>, chúng tôi hỗ trợ ngay.<br>
+    <a href="/">Về trang giới thiệu</a>
+  </footer>
+</main>
+<script>
+(function(){var ua=navigator.userAgent||'';if(/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&'ontouchend' in document)){document.getElementById('ios').style.display='block';}})();
+</script>
+</body>
+</html>
