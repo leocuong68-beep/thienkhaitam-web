@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tải Thiền Khai Tâm cho Android</title>
-<meta name="description" content="Tải và cài ứng dụng Thiền Khai Tâm cho điện thoại Android trong vài phút.">
-<meta property="og:title" content="Tải Thiền Khai Tâm cho Android">
-<meta property="og:description" content="Tải file cài đặt, mở ra và bấm Cài đặt. Đăng nhập bằng Google là dùng được ngay.">
+<title>Dùng Thiền Khai Tâm trên Android</title>
+<meta name="description" content="Để lại Gmail bạn dùng trên điện thoại Android, chúng tôi gửi link tải app Thiền Khai Tâm cho bạn.">
+<meta property="og:title" content="Dùng Thiền Khai Tâm trên Android">
+<meta property="og:description" content="Chỉ cần để lại Gmail, chúng tôi gửi link tải app cho bạn.">
 <meta property="og:image" content="https://thienkhaitam.com/icon-512.png">
 <link rel="icon" href="/favicon.png">
 <style>
@@ -63,66 +63,83 @@ footer a{color:var(--gold)}
 .phone .menu .mail{font-weight:600;background:#fef7e0;border-radius:6px;padding:2px 6px;outline:3px solid #F4B400;outline-offset:2px}
 .cap{text-align:center;font-size:15px;color:var(--muted);margin:10px 0 0}
 @media (prefers-reduced-motion:reduce){.phone .ring{animation:none}}
+form{margin:0}
+label{display:block;font-weight:600;margin:0 0 8px}
+input[type=email],input[type=text]{width:100%;font:inherit;font-size:19px;padding:15px 14px;border-radius:14px;border:1px solid var(--line);background:#0E1730;color:var(--text);margin:0 0 14px}
+input:focus{outline:2px solid var(--gold);outline-offset:1px}
+button.btn{display:block;width:100%;padding:17px 14px;border:0;border-radius:16px;background:var(--gold);color:#0A1124;font:inherit;font-weight:700;font-size:20px;cursor:pointer}
+button.btn:disabled{opacity:.6}
+.msg{margin:14px 0 0;font-size:17px}
+.msg.ok{color:var(--ok)}
+.msg.err{color:#F2A3A3}
+.small{font-size:16px;color:var(--muted)}
 </style>
 <main>
   <header>
     <img src="/apple-touch-icon.png" alt="">
-    <h1>Tải Thiền Khai Tâm cho Android</h1>
-    <p class="lead">Cài trong vài phút, ngay trên chiếc điện thoại bạn sẽ dùng.</p>
+    <h1>Dùng Thiền Khai Tâm trên Android</h1>
+    <p class="lead">Để lại Gmail của bạn, chúng tôi gửi link tải app tới hộp thư trong vòng 24 giờ.</p>
   </header>
 
-  <div class="note ios" id="ios"><b>Bạn đang dùng iPhone hoặc iPad.</b> Trang này dành cho máy Android. Bản iPhone có sẵn trên App Store, mời bạn mở <a href="/tai" style="color:var(--gold)">thienkhaitam.com/tai</a>.</div>
+  <div class="note ios" id="ios"><b>Bạn đang dùng iPhone hoặc iPad.</b> App đã có sẵn trên App Store, mời bạn mở <a href="/tai" style="color:var(--gold)">thienkhaitam.com/tai</a>.</div>
 
-  <section class="step">
-    <span class="num">1</span><h2>Tải file cài đặt</h2>
-    <a class="btn" id="dl" href="ThienKhaiTam.apk" download>Tải Thiền Khai Tâm (Android)</a>
-    <p class="note" id="soon" style="display:none;margin:14px 0 0">File cài đặt đang được cập nhật. Bạn vui lòng quay lại sau ít giờ, hoặc gửi Gmail tới info@thienkhaitam.com để được báo khi có.</p>
-    <p class="see">Nếu Chrome hỏi “File này có thể gây hại”, bạn bấm <b>Vẫn tải xuống</b>. Đây là bản chính thức do Google Play ký.</p>
+  <section class="step" id="formbox">
+    <form id="f" novalidate>
+      <label for="email">Gmail bạn dùng trên điện thoại Android</label>
+      <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="ten.cua.ban@gmail.com" required>
+      <label for="name">Tên của bạn (không bắt buộc)</label>
+      <input id="name" name="name" type="text" autocomplete="name" placeholder="Ví dụ: Minh Anh">
+      <button class="btn" id="go" type="submit">Gửi cho tôi link tải app</button>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+    </form>
+    <p class="see">Cách xem Gmail trên máy: mở ứng dụng <b>Google Play</b>, bấm ảnh đại diện ở góc trên bên phải. Địa chỉ Gmail hiện ở đó.</p>
   </section>
 
-  <section class="step">
-    <span class="num">2</span><h2>Mở file và cài</h2>
-    <ol>
-      <li>Kéo thanh thông báo xuống, chạm vào file vừa tải (hoặc mở ứng dụng <b>Tệp</b>, mục <b>Tải xuống</b>).</li>
-      <li>Nếu máy báo chưa cho phép cài từ nguồn này, bấm <b>Cài đặt</b> và bật <b>Cho phép từ nguồn này</b>, rồi quay lại.</li>
-      <li>Bấm <b>Cài đặt</b>. Nếu Play Protect hỏi, chọn <b>Vẫn cài đặt</b>.</li>
-    </ol>
+  <section class="step" id="done" style="display:none">
+    <span class="num">✓</span><h2>Đã nhận Gmail của bạn</h2>
+    <p>Trong vòng 24 giờ, bạn sẽ nhận thư từ <b>info@thienkhaitam.com</b> kèm link tải app. Bạn chỉ cần mở thư trên điện thoại Android và bấm theo link.</p>
+    <p class="small">Không thấy thư? Bạn xem thêm mục Quảng cáo hoặc Thư rác, hoặc gửi thư tới info@thienkhaitam.com.</p>
   </section>
 
-  <section class="step">
-    <span class="num">3</span><h2>Mở app và đăng nhập Google</h2>
-    <p>Mở Thiền Khai Tâm, vào tab <b>Của tôi</b> và đăng nhập bằng Google. Các bài miễn phí, tập thở, gõ mõ dùng được ngay cả khi chưa đăng nhập.</p>
-  </section>
-
-  <section class="step">
-    <span class="num">4</span><h2>Nhận cập nhật tự động (một lần bấm)</h2>
-    <p>Sau khi bạn đăng nhập, trong vòng một ngày chúng tôi sẽ gửi email mời. Bạn chỉ cần mở email, bấm nút dưới đây bằng <b>đúng Gmail đã đăng nhập</b> và chọn <span class="mock blue">Trở thành người thử nghiệm</span>.</p>
-    <a class="btn" href="https://play.google.com/apps/testing/com.leocuong.thienkhaitam">Trở thành người thử nghiệm</a>
-    <p class="see">Từ đó Google Play tự cập nhật app cho bạn, không cần cài lại. Bạn giúp giữ app trên máy ít nhất 14 ngày nhé, mỗi lượt mở app là một lời ủng hộ cho Thiền Khai Tâm sớm có mặt chính thức trên Google Play.</p>
-  </section>
-
-  <h3>Gặp trục trặc?</h3>
+  <h3>Câu hỏi thường gặp</h3>
   <details>
-    <summary>Không thấy nút Cài đặt, hoặc máy chặn file</summary>
-    <p>Vào Cài đặt của máy, tìm “Cài ứng dụng không rõ nguồn gốc” (có máy ghi “Cài đặt ứng dụng không xác định”), chọn Chrome và bật cho phép. Sau đó mở lại file.</p>
+    <summary>Vì sao phải để lại Gmail?</summary>
+    <p>Thiền Khai Tâm trên Android đang trong giai đoạn mở cho người dùng sớm. Google chỉ cho tải app khi Gmail của bạn đã có trong danh sách, nên chúng tôi cần Gmail để mở quyền tải cho bạn.</p>
   </details>
   <details>
-    <summary>Bấm “Trở thành người thử nghiệm” báo không tìm thấy</summary>
-    <p>Có thể chúng tôi chưa thêm Gmail của bạn. Bạn chờ email mời, hoặc gửi Gmail tới info@thienkhaitam.com để được thêm ngay. App vẫn dùng bình thường trong lúc chờ.</p>
+    <summary>Có mất phí không?</summary>
+    <p>Tải app miễn phí. Các bài miễn phí, tập thở, gõ mõ, lời nhắn mỗi ngày dùng được ngay.</p>
   </details>
   <details>
-    <summary>Muốn mua gói hội viên</summary>
-    <p>Sau khi bấm “Trở thành người thử nghiệm”, bạn mua ngay trong app. Hoặc mua bằng chuyển khoản QR tại <a href="/mua" style="color:var(--gold)">thienkhaitam.com/mua</a>, đăng nhập cùng tài khoản là dùng được.</p>
+    <summary>Tôi dùng email khác Gmail được không?</summary>
+    <p>Bạn cần dùng đúng tài khoản Google đang đăng nhập trên Google Play (thường là địa chỉ @gmail.com).</p>
   </details>
 
   <footer>
-    Cần giúp đỡ? Gửi ảnh chụp màn hình tới <a href="mailto:info@thienkhaitam.com">info@thienkhaitam.com</a>, chúng tôi hỗ trợ ngay.<br>
+    Cần giúp đỡ? Gửi thư tới <a href="mailto:info@thienkhaitam.com">info@thienkhaitam.com</a>.<br>
     <a href="/">Về trang giới thiệu</a>
   </footer>
 </main>
 <script>
 (function(){var ua=navigator.userAgent||'';if(/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&'ontouchend' in document)){document.getElementById('ios').style.display='block';}})();
-fetch('ThienKhaiTam.apk',{method:'HEAD'}).then(function(r){if(!r.ok)throw 0}).catch(function(){document.getElementById('dl').style.display='none';document.getElementById('soon').style.display='block';});
+(function(){
+  var URL='https://kwdtpwwksytkvigfcagp.supabase.co/rest/v1/android_tester_signups';
+  var KEY='sb_publishable_2HJicpW0T9p-IfyQ8Dhtig_B2gdZyHw';
+  var f=document.getElementById('f'),msg=document.getElementById('msg'),go=document.getElementById('go');
+  function show(t,cls){msg.textContent=t;msg.className='msg '+(cls||'');}
+  function done(){document.getElementById('formbox').style.display='none';document.getElementById('done').style.display='block';window.scrollTo(0,0);}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=(f.email.value||'').trim().toLowerCase(),name=(f.name.value||'').trim().slice(0,80);
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){show('Bạn kiểm tra lại địa chỉ Gmail giúp chúng tôi nhé.','err');return;}
+    if(!/@(gmail|googlemail)\.com$/.test(email)&&!confirm('Địa chỉ này không phải @gmail.com. Bạn chắc đây là tài khoản Google đang đăng nhập trên Google Play chứ?'))return;
+    go.disabled=true;show('Đang gửi…');
+    var src=new URLSearchParams(location.search).get('ref')||'web';
+    fetch(URL,{method:'POST',headers:{'apikey':KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({email:email,name:name||null,source:src.slice(0,40)})})
+      .then(function(r){if(r.ok||r.status===409){done();}else{throw new Error(r.status);}})
+      .catch(function(){go.disabled=false;show('Chưa gửi được, bạn thử lại sau ít phút hoặc gửi Gmail tới info@thienkhaitam.com.','err');});
+  });
+})();
 </script>
 </body>
 </html>
