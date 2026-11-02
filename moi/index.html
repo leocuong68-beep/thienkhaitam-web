@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Lời mời thiền cùng</title>
+<meta property="og:title" content="Mời bạn cùng thiền với Thiền Khai Tâm">
+<meta property="og:description" content="Tải app, nhập mã mời và thiền buổi đầu: cả hai cùng nhận quà tặng 7 ngày hội viên.">
+<meta property="og:image" content="https://thienkhaitam.com/icon-512.png">
+<link rel="icon" href="/favicon.png">
+<style>
+:root{--bg:#0A1124;--card:#141E3A;--line:#26335A;--text:#F4EDDF;--muted:#A7B0C6;--gold:#D2A65A}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:24px}
+.box{max-width:420px;width:100%;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px 24px}
+img.icon{width:88px;height:88px;border-radius:20px}
+h1{font-family:Georgia,serif;font-size:26px;margin:14px 0 6px}
+p{color:var(--muted);margin:0 0 16px}
+.ma{font:600 34px/1 ui-monospace,Menlo,monospace;letter-spacing:.18em;color:var(--gold);border:1px dashed var(--line);border-radius:14px;padding:16px 0;margin:6px 0 18px}
+a.btn{display:block;padding:14px;border-radius:14px;background:var(--gold);color:#0A1124;font-weight:600;text-decoration:none;margin-top:10px}
+a.sec{display:block;padding:13px;border-radius:14px;border:1px solid var(--line);color:var(--text);text-decoration:none;margin-top:10px}
+ol{text-align:left;color:var(--muted);padding-left:20px;margin:18px 0 0;font-size:15px}
+.hide{display:none}
+</style>
+</head>
+<body>
+<div class="box">
+  <img class="icon" src="/apple-touch-icon.png" alt="">
+  <h1>Mời bạn cùng thiền</h1>
+  <p>Một người bạn mời bạn dùng Thiền Khai Tâm. Thiền buổi đầu xong, cả hai cùng nhận quà tặng 7 ngày hội viên.</p>
+  <div id="coma" class="hide"><div>Mã mời của bạn</div><div class="ma" id="ma"></div></div>
+  <a class="btn" id="mo" href="thienkhaitam://">Đã có app: mở và nhận mã</a>
+  <a class="sec" href="https://apps.apple.com/app/id6819850658">Tải trên App Store</a>
+  <a class="sec" href="/android/">Dùng Android: nhận link tải</a>
+  <ol>
+    <li>Tải app và tạo tài khoản mới.</li>
+    <li>Vào Của tôi → Mời bạn cùng thiền, nhập mã ở trên (hoặc bấm nút mở app).</li>
+    <li>Thiền một buổi từ 3 phút, hoặc ngồi một ca ở Phòng Thiền Chung.</li>
+  </ol>
+</div>
+<script>
+(function () {
+  var m = (new URLSearchParams(location.search).get('ma') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8);
+  if (!m) return;
+  document.getElementById('ma').textContent = m;
+  document.getElementById('coma').classList.remove('hide');
+  document.getElementById('mo').href = 'thienkhaitam://moi/' + m;
+})();
+</script>
+</body>
+</html>
