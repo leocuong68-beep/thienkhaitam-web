@@ -13,7 +13,7 @@
 <script>
 (function () {
   var IOS = 'https://apps.apple.com/app/id6819850658';
-  var ANDROID = ''; // điền link Google Play khi có
+  var ANDROID = 'https://play.google.com/store/apps/details?id=com.leocuong.thienkhaitam';
   var ua = navigator.userAgent || '';
   var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && 'ontouchend' in document);
   var isAndroid = /Android/i.test(ua);
@@ -41,19 +41,13 @@ a.alt{display:block;color:var(--muted);margin-top:16px;font-size:15px}
 <div class="box">
   <img class="icon" src="/apple-touch-icon.png" alt="">
   <h1>Thiền Khai Tâm</h1>
-  <div id="android" class="hide">
-    <p>Bản Android đang mở cho người dùng thử trên Google Play.</p>
-    <a class="btn" href="/android/">Nhận link tải qua Gmail</a>
-  </div>
   <div id="desktop">
     <p>Quét mã bằng camera điện thoại để tải ứng dụng.</p>
     <div id="qr"><img alt="Mã QR tải ứng dụng" src="/qr-tai.png"></div>
     <a class="btn" href="https://apps.apple.com/app/id6819850658">Mở trên App Store</a>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.leocuong.thienkhaitam">Mở trên Google Play</a>
   </div>
   <a class="alt" href="/">Về trang giới thiệu</a>
 </div>
-<script>
-if (window.__android) { document.getElementById('android').classList.remove('hide'); document.getElementById('desktop').classList.add('hide'); }
-</script>
 </body>
 </html>
